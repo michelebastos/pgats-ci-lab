@@ -8,7 +8,7 @@ name: 'Execução Manual'
 # trabalhos/tarefas dentro da pipe = jobs
 
 on:
-  workflow_dispacth:
+  workflow_dispatch:
 
 jobs:
   e2e-testes:
