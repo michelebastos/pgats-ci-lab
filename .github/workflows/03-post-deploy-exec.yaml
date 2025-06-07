@@ -1,4 +1,3 @@
-
 # CI de nivel 03 - Disparo após a conclusão de um pipeline
 
 # nome do nosso 'pipeline'
@@ -16,12 +15,11 @@ on:
 
 jobs:
   e2e-testes:
-
     # definição que o job vai executar
     runs-on: ubuntu-latest
 
-    # condicional if 
-    # `${ expressão }` 
+    # condicional if
+    # `${ expressão }`
 
     if: ${{ github.event.workflow_run.conclusion == 'success'}}
 
