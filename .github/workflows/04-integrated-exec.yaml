@@ -53,7 +53,7 @@ jobs:
         run: yarn
       
       - name: Instalando o Playwright
-        run: yarn plawriht install
+        run: yarn playwright install
       
       - name: Executando Testes E2E
         run: yarn run e2e
