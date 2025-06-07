@@ -23,6 +23,7 @@ jobs:
 
   unidade:
     runs-on: ubuntu-latest
+    needs: [inspecao]
 
     steps:
       - uses: actions/checkout@v4
@@ -38,6 +39,7 @@ jobs:
 
   e2e-testes:
     runs-on: ubuntu-latest
+    needs: [unidade]
 
     steps:
       - uses: actions/checkout@v4
@@ -67,6 +69,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    needs: [e2e-testes]
 
     steps:
       - name: Simulação do deploy
