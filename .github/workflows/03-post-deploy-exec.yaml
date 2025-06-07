@@ -20,6 +20,11 @@ jobs:
     # definição que o job vai executar
     runs-on: ubuntu-latest
 
+    # condicional if 
+    # `${ expressão }` 
+
+    if: ${{ github.event.workflow_run.conclusion == 'success'}}
+
     #passos para realização dos testes
     steps:
       - uses: actions/checkout@v4
